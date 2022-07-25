@@ -20,9 +20,10 @@ from physician_data.views import *
 
 router = routers.DefaultRouter()
 router.register('providers', ProviderViewSet)
+router.register('address', AddressViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('rest_framework.urls')),
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ]
