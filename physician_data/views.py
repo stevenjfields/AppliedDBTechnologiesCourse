@@ -10,11 +10,11 @@ class ProviderFilter(filters.FilterSet):
     class Meta:
         model = Provider
         fields = '__all__'
-
 class AddressFilter(filters.FilterSet):
     class Meta:
         model = Address
         fields = '__all__'
+
 class ProviderViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Provider.objects.all()
     serializer_class = ProviderSerializer
